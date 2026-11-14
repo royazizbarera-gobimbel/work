@@ -7,6 +7,8 @@ Jika kamu ada pertanyaan dan ada yang ingin dipastikan silahkan tanyakan dahulu 
 
 Jangan menaru hardcode fallback env di kode atau menyimpan env di kode
 
+See [taste.md](.commandcode/taste/taste.md)
+
 ---
 
 ## PROJECT CONFIG
