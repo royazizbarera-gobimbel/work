@@ -1,0 +1,7 @@
+tanggal,tiket,deskripsi,pic,status,service,link
+2026-10-10,bisdev#3202,Memperbaiki Program (Cron) Insert Siswa Lolos TCR,MuhAsmann,DONE,service-tcr / service-insert-siswa,https://github.com/GO-Bimbel/bisdev/issues/3202#issuecomment-6092756950
+2026-10-10,bisdev#3120,Mengerjakan feedback tambahan TOBK Nasional,royazizbarera-gobimbel,DONE,service-tobk-eksternal,https://github.com/GO-Bimbel/bisdev/issues/3120#issuecomment-6078905160
+2026-10-10,bisdev#3133,Mengerjakan feedback enhance rencana masuk,MuhAsmann,DONE,db-kbm,https://github.com/GO-Bimbel/bisdev/issues/3133#issuecomment-6050677619
+2026-10-10 s/d 2026-10-12,finance#1964,BP Online -> Rencana dan Pengusulan Biaya : Enhance penggabungan menu Rencana Kegiatan dan Pengusulan Biaya Kegiatan,royazizbarera-gobimbel,IN PROGRESS,finance,https://github.com/GO-Bimbel/finance/issues/1964
+2026-10-12,bisdev#3129,Feedback IDPP (dikerjakan karena Rizky sedang fokus finance#1963),MuhAsmann / Rizky,DONE,db-idpp,https://github.com/GO-Bimbel/bisdev/issues/3129#issuecomment-6120414734
+2026-10-13,db-kbm#4750,Fixing ajuan perubahan rencana masuk masih tidak bentrok dengan rencana kerja pengajar yang lain,MuhAsmann,DONE,db-kbm,https://github.com/GO-Bimbel/db-kbm/pull/4750/changes/c8e74923543b1f0773aace9b72133ec670a72c40

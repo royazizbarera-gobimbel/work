@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Shell(docs-go-roy/scripts/go-psql-ro.sh:*)"
+    ],
+    "deny": [],
+    "defaultMode": "default"
+  }
+}

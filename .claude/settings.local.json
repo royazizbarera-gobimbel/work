@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(timeout 200 npx tsc --noEmit -p tsconfig.json)",
+      "Bash(rg -n \"@Controller|@Get|@Post|@IsPublic\" src/modules/option/*.controller.ts)"
+    ]
+  }
+}

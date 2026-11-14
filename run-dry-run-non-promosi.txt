@@ -1,0 +1,5 @@
+# 1. Mode Default (Simulasi / Dry-Run Otomatis - Tidak menyentuh DB):
+cd /home/broy/work/multi-cron && go run cmd/migrasi-rencana-kegiatan-bpo/main.go --file="/home/broy/work/docs-go-roy/implementation-plan/progress/26-10-10-1325-bp-online-penggabungan-rencana-dan-biaya-kegiatan/migrasi-data/00. Gabung Import Rencana Kegiatan TA 2728 (tanpa Selling) IMPORT DATA.xlsx"
+
+# 2. Mode Eksekusi Nyata (Insert ke DB jika sudah siap):
+cd /home/broy/work/multi-cron && go run cmd/migrasi-rencana-kegiatan-bpo/main.go --file="/home/broy/work/docs-go-roy/implementation-plan/progress/26-10-10-1325-bp-online-penggabungan-rencana-dan-biaya-kegiatan/migrasi-data/00. Gabung Import Rencana Kegiatan TA 2728 (tanpa Selling) IMPORT DATA.xlsx" --execute

@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Shell(docs-go-roy/scripts/go-psql-ro.sh:*)",
+      "Shell(/home/broy/work/docs-go-roy/scripts/go-psql-ro.sh:*)"
+    ],
+    "ask": [
+      "Shell(psql:*)",
+      "Shell(psql *)"
+    ],
+    "deny": [
+      "Read(**/.env)",
+      "Shell(prisma migrate *)",
+      "Shell(npx prisma migrate *)",
+      "Shell(npx prisma db push*)",
+      "Shell(npx prisma db execute*)"
+    ]
+  }
+}

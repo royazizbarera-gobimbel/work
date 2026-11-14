@@ -1,0 +1,14 @@
+.env*
+*.key
+*.pem
+*credentials*
+.*history*
+
+
+/**/.env
+/**/*.key
+/**/*.pem
+/**/*credentials*
+/**/.*history*
+
+

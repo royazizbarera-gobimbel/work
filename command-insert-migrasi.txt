@@ -1,0 +1,19 @@
+# ==============================================================================
+# COMMAND EKSEKUSI INSERT DATA (MULTI-CRON/MIGRASI-DATA)
+# Gunakan flag --execute untuk melakukan insert nyata ke database
+# ==============================================================================
+
+# 1. Non-Promosi (Gabung):
+go run cmd/migrasi-rencana-kegiatan-bpo/main.go --file="./migrasi-data/00. Gabung Import Rencana Kegiatan TA 2728 (tanpa Selling) IMPORT DATA.xlsx" --execute --type=non-promosi
+
+# 2.A Selling - Promosi:
+go run cmd/migrasi-rencana-kegiatan-bpo/main.go --file="./migrasi-data/01. Selling - Tanpa Panen - Import Rencana Kegiatan IMPORT DATA.xlsx" --execute --type=promosi
+
+# 2.B Selling - Non Promosi:
+go run cmd/migrasi-rencana-kegiatan-bpo/main.go --file="./migrasi-data/01. Selling - Tanpa Panen - Import Rencana Kegiatan IMPORT DATA.xlsx" --execute --type=non-promosi
+
+# 3. Selling - Panen 2:
+go run cmd/migrasi-rencana-kegiatan-bpo/main.go --file="./migrasi-data/02. Selling - 2 - Import Rencana Kegiatan_add ID SEKOLAH IMPORT DATA.xlsx" --execute --type=promosi
+
+# 4. Selling - Panen 3:
+go run cmd/migrasi-rencana-kegiatan-bpo/main.go --file="./migrasi-data/03. Selling - 3 - Import Rencana Kegiatan_add ID SEKOLAH IMPORT DATA.xlsx" --execute --type=promosi

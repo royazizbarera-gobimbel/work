@@ -1,0 +1,27 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+
+# Secrets — jangan pernah commit
+.env
+.env.*
+*.pem
+*.key
+*.jks
+*.keystore
+secrets.*
+local.properties
+
+# Sementara
+*.log
+tmp/
+scratch/
+
+/learning
+
+pycache/
+__pycache__/
+__pycache__/**

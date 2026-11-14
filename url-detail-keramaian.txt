@@ -1,0 +1,1 @@
+http://localhost:3800/api/v1/bp-online/rencana-kegiatan-dengan-anggaran/list-detail?tahun_ajaran=2026/2027&acuan_kegiatan_id=2156&nama_kegiatan=Keramaian%20-%20MAS%20Ulumul%20Qur%60An%20-%2011%20SMA%20-%2012%20SMA&sekolah_id=0&panen_id=11&per_page=10
