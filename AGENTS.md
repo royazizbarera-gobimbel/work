@@ -7,10 +7,12 @@ Jika kamu ada pertanyaan dan ada yang ingin dipastikan silahkan tanyakan dahulu 
 
 Jangan menaru hardcode fallback env di kode atau menyimpan env di kode
 
+Setiap memanggil service lain dari service juga, jangan melakukan try catch, karena itu akan membuat false information, jadi ya teruskan aja errornya nanti ke BFF gitu bro
+
 See [taste.md](.commandcode/taste/taste.md)
 
 ---
-
+`
 ## PROJECT CONFIG
 
 - **Nama proyek**: GO Superapp Backend (Ganesha Operation)
