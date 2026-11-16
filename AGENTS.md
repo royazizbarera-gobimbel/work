@@ -311,6 +311,9 @@ Status boleh `Done` jika **semua** terpenuhi:
 
 - **Workspace Skills** (di `.agents/skills/`):
   - `create-plan`: Standar perancangan plan tiket GO Superapp modular (1 task = 1 file di folder `tasks/` include embedded testing, satukan flow data-svc + BFF dalam 1 task, pisahkan task schema DDL, dan `plan.md` sebagai index dashboard + rekomendasi branch).
+  - `implement-task`: Standar eksekusi implementasi per task file (eksekusi langsung task non-schema sesuai plan, taat AGENTS.md & taste.md, wajib diskusikan temuan/anomali ke user broy, dan verifikasi build paralel via subagent).
+  - `trace-bug`: Standar penelusuran akar masalah bug & diskrepansi data lintas microservice (multi entry-point dari sample data/gejala/tabel/endpoint, susur alur kode sumber, dan komparasi objektif ke database riil via `db-query`).
+  - `db-query`: Standar penelusuran & query database PostgreSQL read-only (default STAGING, eksplisit PROD hanya jika diminta, inspect schema duluan, wajib LIMIT, pakai `docs-go-roy/scripts/go-psql-ro.sh`).
   - `migrasi-so`: Acuan migrasi query/endpoint ke Struktur Organisasi baru GO Bimbel (dual routing `@Post('old-...')`, `WITH RECURSIVE`, hybrid merge fallback).
   - `sync-sheet-migrasi-so`: Sinkronisasi progres migrasi endpoint Superapps Beta ke Google Sheets.
 - **Rekomendasi Slash Commands**:
