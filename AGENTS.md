@@ -9,6 +9,9 @@ Jangan menaru hardcode fallback env di kode atau menyimpan env di kode
 
 Setiap memanggil service lain dari service juga, jangan melakukan try catch, karena itu akan membuat false information, jadi ya teruskan aja errornya nanti ke BFF gitu bro
 
+Saat ini ada perbedaan jauh mengenai struktur bagan organisasi dan kode kode yang berkaitan dengan jabatan, bidang, jabatan pemangku, unit kerja memiliki perbedaan antara yang di repository db-go pada branch main dan staging-beta.
+
+
 See [taste.md](.commandcode/taste/taste.md)
 
 ---
