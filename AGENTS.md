@@ -28,7 +28,6 @@ See [taste.md](.commandcode/taste/taste.md)
     | Proxy (nama di tiket)           | Repo                                                                                |
     | ------------------------------- | ----------------------------------------------------------------------------------- |
     | — (superapp & dashboard admin) | `go-superapp-api` (stg: `https://api-superapps-stg.ganeshaoperationexpert.com`) |
-    | `superapps-beta`              | `api-superapps-beta`                                                              |
     | `goex-siswa`                  | `go-expert-api`                                                                   |
     | `goex-ortu`                   | `go-expert-ortu-api`                                                              |
     | `goex-tobk`                   | `service-tobk-eksternal`                                                          |
@@ -39,7 +38,7 @@ See [taste.md](.commandcode/taste/taste.md)
   - `db-*/`, `finance/` — **service data**. Punya Prisma schema + DB sendiri. Sumber kebenaran data.
   - `service-insert-siswa-*/` — service integrasi pendaftaran siswa.
   - `docs-go-roy/` — dokumentasi & tracking (yang dibaca agent).
-- **Area/scope** (dipakai di `area:` bug/enh & scope commit): **nama repo service**, mis. `go-superapp-api`, `api-superapps-beta`, `db-user`, `db-kbm`, `finance`, `docs`.
+- **Area/scope** (dipakai di `area:` bug/enh & scope commit): **nama repo service**, mis. `go-superapp-api`, `db-user`, `db-kbm`, `finance`, `docs`.
 - **Bahasa dokumen**: Indonesia.
 - **Aturan Protobuff**: Jika params yang dibuat itu nullable, maka gunakan optional agar proto dapat menerima nilai null bukan value tipe data nya.
 
@@ -252,8 +251,7 @@ docs-go-roy/scripts/go-health.sh --deps <repo> # cek apakah service dependensi m
 Jalankan di direktori service terkait:
 
 - **NestJS / TypeScript**:
-  - Lint: `npm run lint`
-  - Build smoke: `npm run build`
+  - Build smoke (Verifikasi Wajib): `npm run build` (Cukup sampai build hijau, tidak perlu lint)
   - Test (jika ada): `npm test -- <pattern>`
   - Smoke dev: `npm run start:dev` + test curl endpoint (atau cek `/api` Swagger)
 - **Golang (`bp-online`, `multi-cron`, dll.)**:
@@ -302,7 +300,7 @@ DDL destruktif (DROP / ALTER TYPE / hapus kolom) di staging & prod
 
 Status boleh `Done` jika **semua** terpenuhi:
 
-1. Kode selesai, build/lint hijau, commit/PR siap di semua repo terkait.
+1. Kode selesai, build hijau (`npm run build`), commit/PR siap di semua repo terkait.
 2. Smoke test terbukti **True PASS** (bukan false-positive 200 OK dengan payload kosong).
 3. Lolos Sanity Check Hirarki Data ($\sum \text{Child} == \text{Parent}$) dan data empiris tidak terlipat ganda.
 4. UAT BisDev lolos / test case terkait Pass.
@@ -312,6 +310,7 @@ Status boleh `Done` jika **semua** terpenuhi:
 ## Skills & Antigravity Tooling
 
 - **Workspace Skills** (di `.agents/skills/`):
+  - `create-plan`: Standar perancangan plan tiket GO Superapp modular (1 task = 1 file di folder `tasks/` include embedded testing, satukan flow data-svc + BFF dalam 1 task, pisahkan task schema DDL, dan `plan.md` sebagai index dashboard + rekomendasi branch).
   - `migrasi-so`: Acuan migrasi query/endpoint ke Struktur Organisasi baru GO Bimbel (dual routing `@Post('old-...')`, `WITH RECURSIVE`, hybrid merge fallback).
   - `sync-sheet-migrasi-so`: Sinkronisasi progres migrasi endpoint Superapps Beta ke Google Sheets.
 - **Rekomendasi Slash Commands**:

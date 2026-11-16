@@ -25,3 +25,6 @@ scratch/
 pycache/
 __pycache__/
 __pycache__/**
+
+/*
+!.agents
